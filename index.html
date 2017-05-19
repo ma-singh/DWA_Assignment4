@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Demo</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<header>
+		<form id="form">
+			<input type="text" id="charName" placeholder="Character Name" />
+			<input type="text" id="charRealm" placeholder="Realm" />
+			<input type="submit" id="characterBtn" value="Load Character" />
+		</form>
+		<div id="loading-div">
+			<img src="images/spiral.svg" alt="loading .gif" id="loading-placeholder"/>
+		</div>
+	</header>
+	<div id="characterInformation">
+		<section id="characterStats">
+			<img src="" id="cIcon" />
+			<h1 id="name"></h1>
+			<h3 id="spec"></h3>
+			<ul id="stats">
+				<li id="primary"></li>
+				<li id="crit"></li>
+				<li id="haste"></li>
+				<li id="mastery"></li>
+				<li id="vers"></li>
+			</ul>
+		</section>
+		<section id="characterArmor">
+			<ul id="armorItems">
+				<h2>Neck</h2>
+				<li class="armorList" id="neck"></li>
+				<h2>Cloak</h2>
+				<li class="armorList" id="cloak"></li>
+				<h2>Rings</h2>
+				<li class="armorList" id="ring1"></li>
+				<li class="armorList" id="ring2"></li>
+			</ul>
+		</section>
+		<div id="profile"><img src="" id="cProfile" /></div>
+	</div>
+	<!-- an item enchant -->
+	<div id="auctionInformation">
+		<h1 id="auctionInfo-div-heading"></h1>
+		<ul id="neckEnchants">
+			<h2>Neck Enchantments</h2>
+		</ul>
+		<ul id="cloakEnchants">
+			<h2>Cloak Enchantments</h2>
+		</ul>
+		<ul id="ringEnchants">
+			<h2>Ring Enchantments</h2>
+		</ul>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/jquery.ajax-cross-origin.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- WOWHEAD TOOLTIPS -->
+	<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+    <script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+body {
+	margin: 0;
+	background-color: #3a1d05;
+	color: #fffbed;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+}
+
+/* ========== LOADING IMAGE ========== */
+
+#loading-placeholder {
+	display: block;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+}
+
+#loading-div {
+	display: none;
+	float: left;
+	position: absolute;
+	right: 5%;
+	top: 25%;
+}
+
+/* ========== HEADER ========== */
+
+header {
+	background: linear-gradient(to bottom, rgba(43,161,204,1) 0%, rgba(15,102,117,1) 100%);
+	padding: 3% 0;
+	overflow: hidden;
+	position: relative;
+}
+
+form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+form input {
+	float: left;
+	width: 25%;
+	height: 30px;
+	margin: 0 5%;
+	font-family: Helvetica;
+	font-size: 1.3em;
+}
+
+#characterBtn {
+	width: 15%;
+	cursor: pointer;
+	background: linear-gradient(to bottom, rgba(161,99,0,1) 0%, rgba(212,139,21,1) 20%, rgba(212,139,21,1) 80%, rgba(161,99,0,1) 100%);
+	color: #fff;
+	padding: 5px 25px;
+	border-width: 0;
+	border-radius: 15px;
+	font-size: 1.0em;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#characterBtn:hover {
+	color:#edebda;
+}
+
+/* =============== CHARACTER STATS =============== */
+
+#characterInformation {
+	overflow: hidden;
+	display: none;
+	width: 100%;
+}
+
+section {
+	width: 40%;
+	margin-top: 5%;
+}
+
+#profile {
+	clear: left;
+	float: left;
+	width: 45%;
+	margin: 3% 0 3% 5%;
+}
+
+#cProfile {
+	max-width: 100%;
+	border: 1px solid #1c0e02;
+}
+
+#characterStats {
+	float: left;
+	width: 35%;
+	margin-left: 10%;
+}
+
+#name {
+	margin-bottom: 0.5%;
+	float: left;
+	width: 80%;
+	margin-top: 2.5%;
+}
+
+#spec {
+	margin-top: 0;
+	float: left;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul#stats {
+	padding-left: 0;
+	clear: both;
+}
+
+#stats li {
+	margin-bottom: 2%;
+}
+
+#characterStats img {
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 2%;
+}
+
+/* ================ EQUIPPED ARMOR =============== */
+
+#characterArmor {
+	float: right;
+	margin-right: 5%;
+}
+
+#armorItems {
+	overflow: hidden;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+#armorItems h2 {
+	clear: left;
+}
+
+.armorList {
+	float: left;
+	margin-bottom: 3%;
+	background-color: #1c0e02;
+	padding: 2% 1%;
+	border-radius: 0 10px 10px 0;
+	clear: both;
+}
+
+#armorItems h2:first-child {
+	margin-top: 15px;
+}
+
+.armorList img {
+	float: left;
+}
+
+.armorList p, .armorList h3 {
+	float: left;
+	margin: 1% 0 0 2%;
+}
+
+.title {
+	width: 80%;
+	color: #ffd800;
+}
+
+.iLvl {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #888;
+}
+
+.itemStats {
+	clear: left;
+}
+
+/* =============== AUCTION HOUSE ============== */
+
+#auctionInformation {
+	clear: both;
+	display: none;
+}
+
+#auctionInfo-div-heading {
+	margin-left: 3%;
+}
+
+#auctionInfo-div-heading span {
+	color: rgb(43,161,204);
+}
+
+#auctionInformation ul h2 {
+	width: 30%;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 0.5%;
+}
+
+#neckEnchants, #cloakEnchants, #ringEnchants {
+	overflow: hidden;
+}
+
+#neckEnchants li, #cloakEnchants li, #ringEnchants li {
+	background-image: url("http://media.blizzard.com/wow/icons/56/inv_misc_enchantedscroll.jpg");
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-color: #1c0e02;
+	border-radius: 5px;
+	width: 25%;
+	height: 56px;
+	padding-top: 40px;
+	padding-left: 70px;
+	margin: 1% 1% 0;
+	float: left;
+}
+
+#cloakEnchants, #ringEnchants {
+	clear: left;
+}
+
+.gold {
+	color: #ffd800;
+}
+
+.tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+	width: 400px;
+}
+
+/*/ ================================================== /*/
+/**/ /* =============== RESPONSIVE =============== */ /**/
+/*/ ================================================== /*/
+
+@media screen and (max-width: 1200px) {
+
+	#characterBtn {
+		padding: 5px 15px;
+		font-size: 0.75em;
+		font-family: 'Helvetica Neue';
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 960px) {
+
+	#loading-div {
+		right: 3%;
+		top: 20%;
+	}
+
+	#characterArmor {
+		width: 55%;
+	}
+
+	.armorList {
+		width: 90%;
+	}
+
+	#auctionInfo-div-heading {
+		text-align: center;
+	}
+
+	#auctionInformation ul h2 {
+		width: 40%;
+	}
+
+	#neckEnchants li, #cloakEnchants li, #ringEnchants li {
+		width: 35%;
+		margin: 1% 1% 1%;
+	}
+}
+
+@media screen and (max-width: 860px) {
+
+	#characterBtn {
+		width: 20%;
+	}
+
+	form input {
+		margin: 0 2% 0 5%;
+	}
+
+	.tooltip {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 730px) {
+
+	form input {
+		font-size: 1.0em;
+	}
+
+	#characterArmor {
+		clear: left;
+		width: 100%;
+		margin: 0 2%;
+	}
+
+	.armorList {
+		border-radius: 15px;
+	}
+
+	#auctionInfo-div-heading {
+		margin-left: 0;
+	}
+
+	#auctionInformation ul h2 {
+		width: 50%;
+	}
+
+	.tooltip {
+		width: 250px;
+	}
+}
+
+
+
+
