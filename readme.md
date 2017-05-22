@@ -2,28 +2,61 @@
 
 This is a tool I created using Blizzard's [World of Warcraft API](https://dev.battle.net/io-docs), and jQuery to load a character's information, and then scan the Auction House of that character's realm to determine the average cost of item enchantments applicable to that character.
 
-## Prerequisites
-
-
 ## Local Installation
 
-git clone repository
-cd into repository
+Clone this repository into your local machine's working directory
+```
+git clone https://github.com/ma-singh/DWA_Assignment4-1.git
+```
 
-## Server Setup
+Change directory into the repository you just cloned
+```
+cd DWA_Assignment4-1
+```
 
-sudo mkdir -p /var/repos/wow_api.git
-cd /var/repos/wow_api.git
-sudo git init --bare
+## Workflow and Development
 
-sudo nano /var/repos/wow_api.git/hooks/post-receive
+Before you begin developing switch to the development branch.
+```
+git checkout -b development
+```
 
-sudo chmod +x /var/repos/wow_api.git/hooks/post-receive
+Create a new branch for your feature
+```
+git checkout -b <FEATURE_NAME>
+```
 
-sudo mkdir -p /var/www/wow-api.com
+When finished developing, merge your feature back into the development branch
+```
+git checkout development
+git merge <FEATURE_NAME>
+```
+
+![Development Workflow](http://i.imgur.com/f2drHGV.jpg)
 
 ## Deployment
 
-git remote add live ssh://root@104.236.20.218:/var/repos/wow_api.git
+Commit changes you've made during your local development to GitHub
+```
+git push origin development
+```
 
-git push live BRANCH_NAME
+If you are required to push a release live, you can do so with the following on your local machine. First, pull the latest stable version of the repository
+```
+git pull origin <TAGGED_RELEASE>
+```
+
+Switch to the production branch
+```
+git checkout -b production
+```
+
+Add the Production server to your list of remote repositories
+```
+git remote add <REMOTE_SERVER_NAME> ssh://<username>:<IP_ADDRESS>:/var/repos/wow_api.git
+```
+
+Push to the Production server
+```
+git push <REMOTE_SERVER_NAME> production
+```
