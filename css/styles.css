@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-color: #3a1d05;
+	background-color: #1a0407;
 	color: #fffbed;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 2px;
@@ -69,6 +69,8 @@ form input {
 	overflow: hidden;
 	display: none;
 	width: 100%;
+	background-size: cover;
+	background-position: center;
 }
 
 section {
@@ -145,7 +147,7 @@ ul#stats {
 .armorList {
 	float: left;
 	margin-bottom: 3%;
-	background-color: #1c0e02;
+	background-color: rgba(26, 26, 26, 0.5);
 	padding: 2% 1%;
 	border-radius: 0 10px 10px 0;
 	clear: both;
@@ -207,11 +209,12 @@ ul#stats {
 	background-image: url("http://media.blizzard.com/wow/icons/56/inv_misc_enchantedscroll.jpg");
 	background-position: left center;
 	background-repeat: no-repeat;
-	background-color: #1c0e02;
+	background-color: rgba(26, 26, 26, 0.85);
+	border: 1px solid #444;
 	border-radius: 5px;
 	width: 25%;
 	height: 56px;
-	padding-top: 40px;
+	padding-top: 10px;
 	padding-left: 70px;
 	margin: 1% 1% 0;
 	float: left;
@@ -223,6 +226,7 @@ ul#stats {
 
 .gold {
 	color: #ffd800;
+	margin-top: 3%;
 }
 
 .tooltip {
@@ -323,7 +327,3 @@ ul#stats {
 		width: 250px;
 	}
 }
-
-
-
-
