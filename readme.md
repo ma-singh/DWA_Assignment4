@@ -6,12 +6,12 @@ This is a tool I created using Blizzard's [World of Warcraft API](https://dev.ba
 
 Clone this repository into your local machine's working directory
 ```
-git clone https://github.com/ma-singh/DWA_Assignment4-1.git
+git clone https://github.com/ma-singh/WoW-API_Tool.git
 ```
 
 Change directory into the repository you just cloned
 ```
-cd DWA_Assignment4-1
+cd WoW-API_Tool
 ```
 
 ## Workflow and Development
